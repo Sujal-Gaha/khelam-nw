@@ -1,7 +1,7 @@
-# domain
+# backend-db
 
 This library was generated with [Nx](https://nx.dev).
 
 ## Building
 
-Run `nx build domain` to build the library.
+Run `nx build backend-db` to build the library.

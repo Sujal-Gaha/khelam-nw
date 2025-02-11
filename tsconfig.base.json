@@ -15,10 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@libs/components": ["libs/components/src/index.ts"],
-      "@libs/domain": ["libs/domain/src/index.ts"],
       "@khel-haru/memory-game": ["khel-haru/memory-game/src/index.ts"],
-      "@khel-haru/tic-tac-toe": ["khel-haru/tic-tac-toe/src/index.ts"]
+      "@khel-haru/tic-tac-toe": ["khel-haru/tic-tac-toe/src/index.ts"],
+      "@libs/backend-db": ["libs/backend-db/src/index.ts"],
+      "@libs/components": ["libs/components/src/index.ts"],
+      "@libs/contracts": ["libs/contracts/src/index.ts"],
+      "@libs/domains": ["libs/domains/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
