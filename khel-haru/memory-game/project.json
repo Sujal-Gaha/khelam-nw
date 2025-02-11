@@ -1,0 +1,9 @@
+{
+  "name": "memory-game",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "khel-haru/memory-game/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project memory-game --web",
+  "targets": {}
+}

@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@libs/components": ["libs/components/src/index.ts"],
+      "@libs/domain": ["libs/domain/src/index.ts"],
+      "@khel-haru/memory-game": ["khel-haru/memory-game/src/index.ts"],
+      "@khel-haru/tic-tac-toe": ["khel-haru/tic-tac-toe/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
