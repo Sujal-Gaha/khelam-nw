@@ -19,7 +19,6 @@
       "@khel-haru/tic-tac-toe": ["khel-haru/tic-tac-toe/src/index.ts"],
       "@libs/backend-db": ["libs/backend-db/src/index.ts"],
       "@libs/components": ["libs/components/src/index.ts"],
-      "@libs/contracts": ["libs/contracts/src/index.ts"],
       "@libs/domains": ["libs/domains/src/index.ts"]
     }
   },
