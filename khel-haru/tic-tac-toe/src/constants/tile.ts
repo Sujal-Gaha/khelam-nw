@@ -1,10 +1,10 @@
-export type TTile = {
+export type Tile = {
   id: number;
   selectedBy: "player_one" | "player_two" | "";
   isSelected: boolean;
 };
 
-export const tiles: TTile[] = [
+export const tiles: Tile[] = [
   {
     id: 1,
     selectedBy: "",

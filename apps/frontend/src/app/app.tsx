@@ -1,17 +1,17 @@
-import { TicTacToePage } from '@khel-haru/tic-tac-toe';
-import { ThemeProvider } from '@libs/components';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { TicTacToePage } from "@khel-haru/tic-tac-toe";
+import { ThemeProvider } from "@libs/components";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <TicTacToePage />,
   },
 ]);
 
 export function App() {
   return (
-    <ThemeProvider defaultTheme="light">
+    <ThemeProvider defaultTheme="dark">
       <RouterProvider router={router} />
     </ThemeProvider>
   );

@@ -1,6 +1,6 @@
-import { Modal } from '../components/modal';
-import { Button } from '@libs/components';
-import { useState } from 'react';
+import { Modal } from "../components/modal";
+import { Button } from "@libs/components";
+import { useState } from "react";
 
 const DrawModal = ({ closeDrawModal, playAgainFn }: { closeDrawModal: () => void; playAgainFn: () => void }) => {
   return (

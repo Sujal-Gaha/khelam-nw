@@ -1,35 +1,38 @@
-import { TTile } from '../constants/tile';
-import { useEffect, useMemo, useState } from 'react';
-import { tiles as tilesData } from '../constants/tile';
-import { winningConditions } from '../constants/winningConditions';
-import { playersData, TPlayer } from '../constants/player';
-import { usePlayerWonModal } from './usePlayerWonModal';
+import { Tile } from "../constants/tile";
+import { useEffect, useState } from "react";
+import { tiles as tilesData } from "../constants/tile";
+import { winningConditions } from "../constants/winningConditions";
+import { playersData, Player } from "../constants/player";
+import { usePlayerWonModal } from "./usePlayerWonModal";
 
-export type TTurn = 'player_one' | 'player_two';
+export type TTurn = "player_one" | "player_two";
 
 export const useBoardFeatures = () => {
-  const [turn, setTurn] = useState<TTurn>('player_one');
-  const [tiles, setTiles] = useState<TTile[]>(tilesData);
+  const [turn, setTurn] = useState<TTurn>("player_one");
+  const [tiles, setTiles] = useState<Tile[]>(tilesData);
   const [isPlayable, setIsPlayable] = useState(true);
+
   const [selectedTileP1, setSelectedTileP1] = useState<number[]>([]);
   const [selectedTileP2, setSelectedTileP2] = useState<number[]>([]);
-  const [players, setPlayers] = useState<TPlayer[]>(playersData);
+
+  const [players, setPlayers] = useState<Player[]>(playersData);
+
   const [hasAPlayerWon, setHasAPlayerWon] = useState(false);
   const [isDraw, setIsDraw] = useState(false);
 
-  const isPlayerOneTurn = turn === 'player_one';
-  const isPlayerTwoTurn = turn === 'player_two';
+  const isPlayerOneTurn = turn === "player_one";
+  const isPlayerTwoTurn = turn === "player_two";
 
-  const isAllTilesSelected = useMemo(() => tiles.every((tile) => tile.isSelected), [tiles]);
+  const isAllTilesSelected = tiles.every((tile) => tile.isSelected);
 
   const playAgainFn = () => {
     setIsDraw(false);
-    setTurn('player_one');
+    setTurn("player_one");
 
     const resetTiles = [...tiles];
     resetTiles.forEach((tile) => {
       tile.isSelected = false;
-      tile.selectedBy = '';
+      tile.selectedBy = "";
     });
     setTiles(resetTiles);
 
@@ -51,7 +54,7 @@ export const useBoardFeatures = () => {
     setPlayers(resetPlayers);
   };
 
-  const toggleTurnFn = () => setTurn(isPlayerOneTurn ? 'player_two' : 'player_one');
+  const toggleTurnFn = () => setTurn(isPlayerOneTurn ? "player_two" : "player_one");
 
   const setTileSelectedBy = (id: number) => {
     const updatedTiles = [...tiles];
@@ -72,7 +75,7 @@ export const useBoardFeatures = () => {
       updatedSelectedTileP1.push(id);
       setSelectedTileP1(updatedSelectedTileP1);
 
-      checkWinningCondition(updatedSelectedTileP1, 'player_one');
+      checkWinningCondition(updatedSelectedTileP1, "player_one");
     }
 
     if (isPlayerTwoTurn) {
@@ -80,7 +83,7 @@ export const useBoardFeatures = () => {
       updatedSelectedTileP2.push(id);
       setSelectedTileP2(updatedSelectedTileP2);
 
-      checkWinningCondition(updatedSelectedTileP2, 'player_two');
+      checkWinningCondition(updatedSelectedTileP2, "player_two");
     }
   };
 
@@ -94,14 +97,14 @@ export const useBoardFeatures = () => {
         setTimeout(() => {
           const updatedPlayers = [...players];
 
-          if (player === 'player_one') {
+          if (player === "player_one") {
             updatedPlayers[0].score++;
             setPlayers(updatedPlayers);
             setPlayer(players[0].name);
             openPlayerWonModal();
           }
 
-          if (player === 'player_two') {
+          if (player === "player_two") {
             updatedPlayers[1].score++;
             setPlayers(updatedPlayers);
             setPlayer(players[1].name);

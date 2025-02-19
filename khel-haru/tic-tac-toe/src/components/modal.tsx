@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { IoMdCloseCircle } from 'react-icons/io';
+import { ReactNode } from "react";
+import { IoMdCloseCircle } from "react-icons/io";
 
 export const Modal = ({
   children,

@@ -1,6 +1,6 @@
-export type TWinningCondition = number[];
+export type WinningCondition = number[];
 
-export const winningConditions: TWinningCondition[] = [
+export const winningConditions: WinningCondition[] = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],

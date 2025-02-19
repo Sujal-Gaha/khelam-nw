@@ -1,6 +1,6 @@
-import { Button } from '@libs/components';
-import { useState } from 'react';
-import { Modal } from '../components/modal';
+import { Button } from "@libs/components";
+import { useState } from "react";
+import { Modal } from "../components/modal";
 
 const PlayerWonModal = ({
   closeModal,
@@ -31,7 +31,7 @@ const PlayerWonModal = ({
 
 export const usePlayerWonModal = ({ playAgainFn }: { playAgainFn: () => void }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [player, setPlayer] = useState('');
+  const [player, setPlayer] = useState("");
 
   const openPlayerWonModal = () => setIsModalOpen(true);
   const closePlayerWonModal = () => setIsModalOpen(false);

@@ -1,23 +1,17 @@
-import { TTile } from '../constants/tile';
-import { motion } from 'framer-motion';
-import { Cross } from '../components/cross';
-import { Circle } from '../components/circle';
+import { Tile } from "../constants/tile";
+import { motion } from "framer-motion";
+import { Cross } from "../components/cross";
+import { Circle } from "../components/circle";
 
-export const Board = ({
-  tiles,
-  handleTileClickedFn,
-}: {
-  tiles: TTile[];
-  handleTileClickedFn: (id: number) => void;
-}) => {
+export const Board = ({ tiles, handleTileClickedFn }: { tiles: Tile[]; handleTileClickedFn: (id: number) => void }) => {
   return (
     <div className="grid grid-cols-3 grid-rows-3 h-full gap-4">
       {tiles.map((tile) => {
-        if (tile.selectedBy === 'player_one') {
+        if (tile.selectedBy === "player_one") {
           return <Cross key={tile.id} />;
         }
 
-        if (tile.selectedBy === 'player_two') {
+        if (tile.selectedBy === "player_two") {
           return <Circle key={tile.id} />;
         }
 

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export const Cross = () => {
   const draw = {
@@ -9,7 +9,7 @@ export const Cross = () => {
         pathLength: 1,
         opacity: 1,
         transition: {
-          pathLength: { delay, type: 'spring', duration: 0.5, bounce: 0 },
+          pathLength: { delay, type: "spring", duration: 0.5, bounce: 0 },
           opacity: { delay, duration: 0.01 },
         },
       };

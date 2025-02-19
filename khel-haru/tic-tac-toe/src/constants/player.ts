@@ -1,10 +1,10 @@
-export type TPlayer = {
+export type Player = {
   id: number;
   name: string;
   score: number;
 };
 
-export const playersData: TPlayer[] = [
+export const playersData: Player[] = [
   {
     id: 1,
     name: "Player 1",

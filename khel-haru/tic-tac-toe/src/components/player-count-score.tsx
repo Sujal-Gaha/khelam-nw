@@ -1,6 +1,6 @@
-import { TPlayer } from '../constants/player';
+import { Player } from "../constants/player";
 
-export const PlayerScoreCount = ({ players }: { players: TPlayer[] }) => {
+export const PlayerScoreCount = ({ players }: { players: Player[] }) => {
   return (
     <div className="flex flex-col w-full gap-2">
       {players.map((player) => (
