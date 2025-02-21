@@ -124,10 +124,5 @@ export type TLogoutUserInput = z.infer<typeof LogoutUserSchemaInput>;
 export const LogoutUserSchemaOutput = UserSchema.pick({
   id: true,
   name: true,
-  email: true,
-  is_email_verified: true,
-  role: true,
-  created_at: true,
-  updated_at: true,
 });
 export type TLogoutUserOutput = z.infer<typeof LogoutUserSchemaOutput> | null;
