@@ -1,5 +1,17 @@
-@import '../../../libs/components/src/components.css';
+@import "../../../libs/components/src/components.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animate-shimmer {
+  background-size: 200% 100%;
+  background-image: linear-gradient(
+    to right,
+    hsl(var(--primary)) 0%,
+    hsl(var(--primary)) 45%,
+    hsl(var(--primary-foreground)) 50%,
+    hsl(var(--primary)) 55%,
+    hsl(var(--primary)) 100%
+  );
+}

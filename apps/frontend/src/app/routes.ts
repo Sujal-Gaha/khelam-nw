@@ -45,6 +45,7 @@ export const _ROUTER_NESTED_PATHS = {
 const createFullRoutes = () => {
   return {
     HOME: "/",
+    DASHBOARD: "/dashboard",
     // Auth
     BASE_AUTH: AUTH_PATHS.BASE,
     LOGIN: `${AUTH_PATHS.BASE}/${AUTH_PATHS.LOGIN}`,
