@@ -1,13 +1,6 @@
-import { TicTacToePage } from "@khel-haru/tic-tac-toe";
 import { ThemeProvider } from "@libs/components";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <TicTacToePage />,
-  },
-]);
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router";
 
 export function App() {
   return (

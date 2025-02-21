@@ -1,0 +1,71 @@
+const AUTH_PATHS = {
+  BASE: "/auth",
+  LOGIN: "login",
+  SIGNUP: "signup",
+  VERIFY_EMAIL: "verify-email",
+  FORGOT_PASSWORD: "forgot-password",
+};
+
+const ADMIN_PATHS = {
+  BASE: "/admin",
+  DASHBOARD: "dashboard",
+  GAME: "game",
+  USER: "user",
+};
+
+const GAME_PATHS = {
+  BASE: "/games",
+  TICTACTOE: "tictactoe",
+  MEMORYGAME: "memorygame",
+  CHESS: "chess",
+};
+
+export const _ROUTER_NESTED_PATHS = {
+  AUTH: {
+    BASE: AUTH_PATHS.BASE,
+    LOGIN: AUTH_PATHS.LOGIN,
+    SIGNUP: AUTH_PATHS.SIGNUP,
+    VERIFY_EMAIL: AUTH_PATHS.VERIFY_EMAIL,
+    FORGOT_PASSWORD: AUTH_PATHS.FORGOT_PASSWORD,
+  },
+  ADMIN: {
+    BASE: ADMIN_PATHS.BASE,
+    DASHBOARD: ADMIN_PATHS.DASHBOARD,
+    GAME: ADMIN_PATHS.GAME,
+    USER: ADMIN_PATHS.USER,
+  },
+  GAMES: {
+    BASE: GAME_PATHS.BASE,
+    TICTACTOE: GAME_PATHS.TICTACTOE,
+    MEMORYGAME: GAME_PATHS.MEMORYGAME,
+    CHESS: GAME_PATHS.CHESS,
+  },
+};
+
+const createFullRoutes = () => {
+  return {
+    HOME: "/",
+    // Auth
+    BASE_AUTH: AUTH_PATHS.BASE,
+    LOGIN: `${AUTH_PATHS.BASE}/${AUTH_PATHS.LOGIN}`,
+    SIGNUP: `${AUTH_PATHS.BASE}/${AUTH_PATHS.SIGNUP}`,
+    VERIFY_EMAIL: `${AUTH_PATHS.BASE}/${AUTH_PATHS.VERIFY_EMAIL}`,
+    FORGOT_PASSWORD: `${AUTH_PATHS.BASE}/${AUTH_PATHS.FORGOT_PASSWORD}`,
+    RESET_PASSWORD: "/reset-password",
+    // Games
+    BASE_GAMES: GAME_PATHS.BASE,
+    TICTACTOE: `${GAME_PATHS.BASE}/${GAME_PATHS.TICTACTOE}`,
+    MEMORYGAME: `${GAME_PATHS.BASE}/${GAME_PATHS.MEMORYGAME}`,
+    CHESS: `${GAME_PATHS.BASE}/${GAME_PATHS.CHESS}`,
+    // Admin
+    BASE_ADMIN: ADMIN_PATHS.BASE,
+    ADMIN_DASHBOARD: `${ADMIN_PATHS.BASE}/${ADMIN_PATHS.DASHBOARD}`,
+    ADMIN_GAME: `${ADMIN_PATHS.BASE}/${ADMIN_PATHS.GAME}`,
+    ADMIN_USER: `${ADMIN_PATHS.BASE}/${ADMIN_PATHS.USER}`,
+  };
+};
+
+/**
+ * use this to perform navigations
+ */
+export const _FULL_ROUTES = createFullRoutes();
