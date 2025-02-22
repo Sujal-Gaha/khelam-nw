@@ -1,13 +1,19 @@
 import { ThemeProvider, Toaster } from "@libs/components";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
+import { HotkeysProvider } from "react-hotkeys-hook";
+import { SettingsHotKeyProvider } from "../provider/HotKeyProvider";
 
 export function App() {
   return (
-    <ThemeProvider defaultTheme="dark">
-      <RouterProvider router={router} />
-      <Toaster />
-    </ThemeProvider>
+    <HotkeysProvider initiallyActiveScopes={["settings"]}>
+      <SettingsHotKeyProvider>
+        <ThemeProvider defaultTheme="dark">
+          <RouterProvider router={router} />
+          <Toaster />
+        </ThemeProvider>
+      </SettingsHotKeyProvider>
+    </HotkeysProvider>
   );
 }
 
