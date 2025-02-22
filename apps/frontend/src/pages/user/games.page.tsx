@@ -1,15 +1,38 @@
 import { Button, Card, CardContent, CardFooter, CardHeader, CardTitle, Container } from "@libs/components";
+import { _FULL_ROUTES } from "../../app/routes";
+import { Link } from "react-router-dom";
 
-const games = [
-  { id: 1, title: "Tic Tac Toe", description: "Play a classic game of Tic Tac Toe!" },
-  { id: 2, title: "Memory Game", description: "Challenge your memory with this fun game!" },
-  { id: 3, title: "Chess", description: "Engage in a strategic game of chess!" },
+type Game = {
+  id: number;
+  title: string;
+  description: string;
+  url: string;
+};
+
+const games: Game[] = [
+  {
+    id: 1,
+    title: "Tic Tac Toe",
+    description: "Play a classic game of Tic Tac Toe!",
+    url: _FULL_ROUTES.TICTACTOE,
+  },
+  {
+    id: 2,
+    title: "Memory Game",
+    description: "Challenge your memory with this fun game!",
+    url: _FULL_ROUTES.MEMORYGAME,
+  },
+  {
+    id: 3,
+    title: "Chess",
+    description: "Engage in a strategic game of chess!",
+    url: _FULL_ROUTES.CHESS,
+  },
 ];
 
 export const GamesPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* <Header /> */}
       <main className="flex-grow">
         <Container>
           <h1 className="text-3xl font-bold my-8">Choose Your Game</h1>
@@ -23,14 +46,15 @@ export const GamesPage = () => {
                   <p>{game.description}</p>
                 </CardContent>
                 <CardFooter>
-                  <Button>Play Now</Button>
+                  <Button asChild>
+                    <Link to={game.url}>Play Now</Link>
+                  </Button>
                 </CardFooter>
               </Card>
             ))}
           </div>
         </Container>
       </main>
-      {/* <Footer /> */}
     </div>
   );
 };
