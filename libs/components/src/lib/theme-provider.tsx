@@ -1,14 +1,20 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-type Theme = "dark" | "light" | "system";
+export enum ThemeEnum {
+  DARK = "dark",
+  LIGHT = "light",
+  SYSTEM = "system",
+}
 
-type ThemeProviderProps = {
+export type Theme = `${ThemeEnum}`;
+
+export type ThemeProviderProps = {
   children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
 };
 
-type ThemeProviderState = {
+export type ThemeProviderState = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
 };
