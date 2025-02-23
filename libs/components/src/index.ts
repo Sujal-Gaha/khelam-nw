@@ -14,3 +14,4 @@ export * from "./ui/skeleton";
 export * from "./ui/sonner";
 export * from "./ui/switch";
 export * from "./ui/tab";
+export * from "./ui/tooltip";
