@@ -7,7 +7,11 @@
     "dev:backend": "nx run backend:serve --configuration=production",
     "build:frontend": "nx run frontend:build --configuration=production",
     "build:backend": "nx run backend:build --configuration=production",
-    "build": "yarn build:frontend && yarn build:backend"
+    "build": "yarn build:frontend && yarn build:backend",
+    "prisma:migrate-dev": "npx prisma migrate dev --schema=libs/backend-db/prisma/schema.prisma",
+    "prisma:migrate-deploy": "npx prisma migrate deploy --schema=libs/backend-db/prisma/schema.prisma",
+    "prisma:migrate-reset": "npx prisma migrate reset --schema=libs/backend-db/prisma/schema.prisma",
+    "prisma:generate": "npx prisma generate --schema=libs/backend-db/prisma/schema.prisma"
   },
   "private": true,
   "dependencies": {

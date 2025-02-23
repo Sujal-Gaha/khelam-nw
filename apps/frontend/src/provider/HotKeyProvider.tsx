@@ -60,7 +60,7 @@ export const SettingsHotKeyProvider = ({ children }: { children: ReactNode }) =>
           </DialogHeader>
           <div className="grid gap-4 py-4">
             <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="theme" className="text-right">
+              <Label htmlFor="theme" className="text-left">
                 Theme
               </Label>
               <Select
