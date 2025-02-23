@@ -19,8 +19,9 @@ import {
   TooltipContent,
 } from "@libs/components";
 import { motion } from "framer-motion";
-import { Bot, Users, Copy, Share2, ArrowRight, Check } from "lucide-react";
+import { Bot, Users, Copy, Share2, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { Clipboard } from "../components/clipboard";
 
 enum BotDifficultyEnum {
   EASY = "easy",
@@ -143,21 +144,21 @@ const MultiplayerCard = () => {
           <label className="text-sm font-medium">Invite your friends</label>
           <div className="flex gap-2">
             <Input value={inviteLink} placeholder="Generate link to invite friend..." readOnly />
+            <Button variant="outline" size="icon" className="shrink-0">
+              <Clipboard content={inviteLink} icon={<Copy className="h-4 w-4" />} />
+            </Button>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <Button variant="outline" size="icon" onClick={copyInviteLink} className="shrink-0">
-                    <Copy className="h-4 w-4" />
+                  <Button variant="outline" size="icon" onClick={shareInviteLink} className="shrink-0">
+                    <Share2 className="h-4 w-4" />
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>Copy link</p>
+                  <p>Share link</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
-            <Button variant="outline" size="icon" onClick={shareInviteLink} className="shrink-0">
-              <Share2 className="h-4 w-4" />
-            </Button>
           </div>
         </div>
         <Button
