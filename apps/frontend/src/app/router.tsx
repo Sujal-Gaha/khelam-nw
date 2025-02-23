@@ -4,7 +4,7 @@ import { _FULL_ROUTES } from "./routes";
 import { GamesPage } from "../pages/user/games.page";
 import { UserNavbarComponent } from "../pages/user/user.navbar.component";
 import { UserFooterComponent } from "../pages/user/user.footer.component";
-import { TicTacToePage } from "@khel-haru/tic-tac-toe";
+import { PlayerVsPlayerMode, TicTacToePage } from "@khel-haru/tic-tac-toe";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: _FULL_ROUTES.TICTACTOE,
         element: <TicTacToePage />,
+      },
+      {
+        path: _FULL_ROUTES.PLAYER_VS_PLAYER_MODE,
+        element: <PlayerVsPlayerMode />,
       },
       {
         path: _FULL_ROUTES.MEMORYGAME,
