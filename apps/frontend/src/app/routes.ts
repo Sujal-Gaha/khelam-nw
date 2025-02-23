@@ -22,6 +22,8 @@ const GAME_PATHS = {
 
 const TICTACTOE_PATHS = {
   PLAYER_VS_PLAYER_MODE: "player-vs-player",
+  PLAYER_VS_AI_MODE: "player-vs-ai",
+  ROOM: "room",
 };
 
 export const _ROUTER_NESTED_PATHS = {
@@ -61,6 +63,8 @@ const createFullRoutes = () => {
     BASE_GAMES: GAME_PATHS.BASE,
     TICTACTOE: `${GAME_PATHS.BASE}/${GAME_PATHS.TICTACTOE}`,
     PLAYER_VS_PLAYER_MODE: `${GAME_PATHS.BASE}/${GAME_PATHS.TICTACTOE}/${TICTACTOE_PATHS.PLAYER_VS_PLAYER_MODE}`,
+    PLAYER_VS_AI_MODE: `${GAME_PATHS.BASE}/${GAME_PATHS.TICTACTOE}/${TICTACTOE_PATHS.PLAYER_VS_AI_MODE}`,
+    ROOM: `${GAME_PATHS.BASE}/${GAME_PATHS.TICTACTOE}/${TICTACTOE_PATHS.ROOM}/:roomId`,
 
     MEMORYGAME: `${GAME_PATHS.BASE}/${GAME_PATHS.MEMORYGAME}`,
     CHESS: `${GAME_PATHS.BASE}/${GAME_PATHS.CHESS}`,
@@ -72,7 +76,4 @@ const createFullRoutes = () => {
   };
 };
 
-/**
- * use this to perform navigations
- */
 export const _FULL_ROUTES = createFullRoutes();
