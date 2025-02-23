@@ -43,8 +43,7 @@
       "dependsOn": ["build"],
       "options": {
         "buildTarget": "backend:build",
-        "runBuildTargetDependencies": false,
-        "port": 4321
+        "runBuildTargetDependencies": false
       },
       "configurations": {
         "development": {

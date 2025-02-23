@@ -28,5 +28,23 @@ model User {
     created_at        DateTime @default(now())
     updated_at        DateTime @updatedAt
 
+    setting Setting?
+
     @@map("users")
+}
+
+enum ThemeEnum {
+    LIGHT
+    DARK
+    SYSTEM
+}
+
+model Setting {
+    id           String    @id @default(cuid())
+    user         User      @relation(fields: [userId], references: [id])
+    userId       String    @unique
+    theme        ThemeEnum @default(LIGHT)
+    notification Boolean   @default(true)
+
+    @@map("settings")
 }
