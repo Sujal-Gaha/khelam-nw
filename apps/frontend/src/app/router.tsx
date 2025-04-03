@@ -1,10 +1,26 @@
 import { LandingPage } from "../pages/landing.page";
-import { createBrowserRouter, Outlet } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouteObject } from "react-router-dom";
 import { _FULL_ROUTES } from "./routes";
 import { GamesPage } from "../pages/user/games.page";
 import { UserNavbarComponent } from "../pages/user/user.navbar.component";
 import { UserFooterComponent } from "../pages/user/user.footer.component";
 import { PlayerVsPlayerMode, TicTacToePage } from "@khel-haru/tic-tac-toe";
+import { TetrisPage } from "@khel-haru/tetris";
+import { SudokuPage } from "@khel-haru/sudoku";
+
+const tetrisRouter: RouteObject[] = [
+  {
+    path: _FULL_ROUTES.TETRIS,
+    element: <TetrisPage />,
+  },
+];
+
+const sudokuRouter: RouteObject[] = [
+  {
+    path: _FULL_ROUTES.SUDOKU,
+    element: <SudokuPage />,
+  },
+];
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +53,8 @@ export const router = createBrowserRouter([
         path: _FULL_ROUTES.MEMORYGAME,
         element: <div>Memory Game</div>,
       },
+      ...tetrisRouter,
+      ...sudokuRouter,
     ],
   },
 ]);

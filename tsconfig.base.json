@@ -18,7 +18,7 @@
       "@khel-haru/memory-game": ["khel-haru/memory-game/src/index.ts"],
       "@khel-haru/sudoku": ["khel-haru/sudoku/src/index.ts"],
       "@khel-haru/tic-tac-toe": ["khel-haru/tic-tac-toe/src/index.ts"],
-      "@khelam-nw/tetris": ["khel-haru/tetris/src/index.ts"],
+      "@khel-haru/tetris": ["khel-haru/tetris/src/index.ts"],
       "@libs/backend-db": ["libs/backend-db/src/index.ts"],
       "@libs/components": ["libs/components/src/index.ts"],
       "@libs/domains": ["libs/domains/src/index.ts"]

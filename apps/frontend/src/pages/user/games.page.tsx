@@ -28,6 +28,18 @@ const games: Game[] = [
     description: "Engage in a strategic game of chess!",
     url: _FULL_ROUTES.CHESS,
   },
+  {
+    id: 4,
+    title: "Tetris",
+    description: "Play a fun game of falling blocks",
+    url: _FULL_ROUTES.TETRIS,
+  },
+  {
+    id: 5,
+    title: "Sudoku",
+    description: "Test your brain with numbers in grid",
+    url: _FULL_ROUTES.SUDOKU,
+  },
 ];
 
 export const GamesPage = () => {
