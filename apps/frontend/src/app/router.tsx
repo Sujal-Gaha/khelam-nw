@@ -7,6 +7,7 @@ import { UserFooterComponent } from "../pages/user/user.footer.component";
 import { PlayerVsPlayerMode, TicTacToePage } from "@khel-haru/tic-tac-toe";
 import { TetrisPage } from "@khel-haru/tetris";
 import { SudokuPage } from "@khel-haru/sudoku";
+import { MemoryGamePage } from "@khel-haru/memory-game";
 
 const tetrisRouter: RouteObject[] = [
   {
@@ -19,6 +20,13 @@ const sudokuRouter: RouteObject[] = [
   {
     path: _FULL_ROUTES.SUDOKU,
     element: <SudokuPage />,
+  },
+];
+
+const memoryGameRouter: RouteObject[] = [
+  {
+    path: _FULL_ROUTES.MEMORYGAME,
+    element: <MemoryGamePage />,
   },
 ];
 
@@ -49,10 +57,7 @@ export const router = createBrowserRouter([
         path: _FULL_ROUTES.PLAYER_VS_PLAYER_MODE,
         element: <PlayerVsPlayerMode />,
       },
-      {
-        path: _FULL_ROUTES.MEMORYGAME,
-        element: <div>Memory Game</div>,
-      },
+      ...memoryGameRouter,
       ...tetrisRouter,
       ...sudokuRouter,
     ],
