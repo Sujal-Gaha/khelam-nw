@@ -6,7 +6,7 @@ import { UserNavbarComponent } from "../pages/user/user.navbar.component";
 import { UserFooterComponent } from "../pages/user/user.footer.component";
 import { PlayerVsPlayerMode, TicTacToePage } from "@khel-haru/tic-tac-toe";
 import { TetrisPage } from "@khel-haru/tetris";
-import { SudokuPage } from "@khel-haru/sudoku";
+import { SudokuPage, SudokuStartPage } from "@khel-haru/sudoku";
 import { MemoryGamePage } from "@khel-haru/memory-game";
 
 const tetrisRouter: RouteObject[] = [
@@ -20,6 +20,10 @@ const sudokuRouter: RouteObject[] = [
   {
     path: _FULL_ROUTES.SUDOKU,
     element: <SudokuPage />,
+  },
+  {
+    path: _FULL_ROUTES.SUDOKU_START,
+    element: <SudokuStartPage />,
   },
 ];
 

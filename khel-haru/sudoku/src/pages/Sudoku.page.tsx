@@ -11,6 +11,7 @@ import {
   RadioGroup,
   RadioGroupItem,
 } from "@libs/components";
+import { Link } from "react-router-dom";
 
 export enum DifficultyEnum {
   EASY = "EASY",
@@ -61,8 +62,8 @@ export const SudokuPage = () => {
           </div>
         </CardContent>
         <CardFooter>
-          <Button className="w-full" size="lg" onClick={() => null}>
-            Start Game
+          <Button className="w-full" size="lg" asChild>
+            <Link to={`/games/sudoku/start?difficulty=${selectedDifficulty}`}>Start Game</Link>
           </Button>
         </CardFooter>
       </Card>

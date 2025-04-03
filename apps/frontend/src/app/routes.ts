@@ -28,6 +28,10 @@ const TICTACTOE_PATHS = {
   ROOM: "room",
 };
 
+const SUDOKU_PATHS = {
+  START: "start",
+};
+
 export const _ROUTER_NESTED_PATHS = {
   AUTH: {
     BASE: AUTH_PATHS.BASE,
@@ -72,7 +76,11 @@ const createFullRoutes = () => {
 
     MEMORYGAME: `${GAME_PATHS.BASE}/${GAME_PATHS.MEMORYGAME}`,
     CHESS: `${GAME_PATHS.BASE}/${GAME_PATHS.CHESS}`,
+
+    // Sudoku
     SUDOKU: `${GAME_PATHS.BASE}/${GAME_PATHS.SUDOKU}`,
+    SUDOKU_START: `${GAME_PATHS.BASE}/${GAME_PATHS.SUDOKU}/${SUDOKU_PATHS.START}`,
+
     TETRIS: `${GAME_PATHS.BASE}/${GAME_PATHS.TETRIS}`,
     // Admin
     BASE_ADMIN: ADMIN_PATHS.BASE,
